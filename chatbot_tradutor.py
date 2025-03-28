@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Use st.secrets se for usar no Streamlit Cloud
-openai.api_key = "SUA_CHAVE_API_AQUI"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="Chatbot Tradutor", layout="centered")
 st.title("Chatbot Tradutor Literal")
