@@ -13,7 +13,7 @@ user_input = st.text_area("Texto em inglês:", height=150)
 
 if st.button("Traduzir"):
     if user_input.strip() != "":
-        prompt = f"Traduza literalmente, sem interpretar ou reescrever: {user_input}"
+        prompt = f"Traduza utilizando uma linguagem médica técnica e norma forma de português, mas sem interpretar ou reescrever mudando o sentido do texto: {user_input}"
 
         response = openai.ChatCompletion.create(
             model="gpt-4o-mini",
